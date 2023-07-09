@@ -265,7 +265,7 @@ main {
   background-color: #f8ede9;
 }
 
-main .titulo-principal-catering {
+.titulo-principal-catering {
   background: url(../imagenes/banner2.png);
   height: 200px;
   background-position: center;
@@ -353,7 +353,7 @@ main {
   background-color: #f8ede9;
 }
 
-main .titulo-principal-promociones {
+.titulo-principal-promociones {
   background: url(../imagenes/alf.png);
   height: 200px;
   background-position: center;
@@ -407,7 +407,7 @@ h1 .promociones-textos {
 
 /*------------------------------- estilos página contacto---------------------------------*/
 
-main .titulo-principal-contacto {
+.titulo-principal-contacto {
   background: url(../imagenes/pastelera1.svg);
   height: 200px;
   background-position: center;
@@ -441,10 +441,6 @@ textarea {
   padding: 0.5rem;
 }
 
-#email {
-  box-sizing: content-box;
-}
-
 /* ------------------------------estilos footer---------------------------------*/
 
 .footer-pasteleria {
@@ -456,7 +452,7 @@ textarea {
 /*-------------media querys adaptables a responsive TABLET--------*/
 
 @media screen and (max-width: 899px) {
-  body {
+  main {
     max-width: 600px;
     margin: 0 auto;
     background: #f8ede9;
@@ -578,24 +574,19 @@ textarea {
 
   /* --------------estilos de contacto ------------------- */
 
-  main .titulo-principal-titulo {
+  .titulo-principal-titulo {
     font-size: 3rem;
     margin-top: 1rem;
   }
 
-  main .subtitulo-pal {
+  .subtitulo-pal {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
-  #email {
-    box-sizing: content-box;
+  .formulario {
+    padding: 2rem;
   }
-
-.formulario{
-  padding: 2rem;
-}
-
 }
 
 /* -----------------------media querys adaptables a responsive MOBILE----------------------------*/
@@ -607,7 +598,7 @@ textarea {
 }
 
 @media screen and (max-width: 499px) {
-  body {
+  main {
     max-width: 350px;
     margin: 0 auto;
     background: #f8ede9;
@@ -741,11 +732,11 @@ textarea {
 
   /* --------------estilos de catering ------------------- */
 
-  main .titulo-principal-catering {
+  .titulo-principal-catering {
     height: 100px;
   }
 
-  main .catering-textos {
+  .catering-textos {
     font-size: 3rem;
   }
 
@@ -786,11 +777,11 @@ textarea {
 
   /* --------------estilos de promociones ------------------- */
 
-  main .titulo-principal-promociones {
+  .titulo-principal-promociones {
     height: 100px;
   }
 
-  main .promociones-textos {
+  .promociones-textos {
     font-size: 2rem;
   }
 
@@ -813,16 +804,16 @@ textarea {
 
   /* --------------estilos de contacto ------------------- */
 
-  main .titulo-principal-contacto {
+  .titulo-principal-contacto {
     height: 100px;
   }
 
-  main .titulo-principal-titulo {
+  .titulo-principal-titulo {
     font-size: 2rem;
     margin-top: -0.6rem;
   }
 
-  main .subtitulo-pal {
+  .subtitulo-pal {
     margin-top: 0.6rem;
     margin-bottom: 0.8rem;
   }
@@ -840,4 +831,3 @@ textarea {
     padding: 0.3rem;
   }
 }
-
