@@ -191,7 +191,7 @@ main {
   background-color: #f8ede9;
 }
 
-main .titulo-principal-productos {
+.titulo-principal-productos {
   background: url(../imagenes/banner__productos.png);
   height: 200px;
   background-position: center;
