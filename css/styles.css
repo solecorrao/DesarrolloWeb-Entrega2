@@ -1,0 +1,843 @@
+/*----------------------------------reset---------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/*-----------------estilos generales: Se replican en los html-------------------*/
+
+body {
+  background-color: beige;
+}
+
+/* -------------------estilos menú de navegación---------------------------------*/
+
+.navbar {
+  background-color: #e6b5a9;
+  color: #808080;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link:hover {
+  color: beige;
+}
+
+/*-----------------------------estilos del banner home-----------------------------*/
+
+.banner {
+  position: relative;
+}
+
+.inicio-presentacion {
+  height: 300px;
+  background-image: url(../imagenes/bannermuf.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  min-height: auto;
+}
+
+.contenedor-textos {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9e2634;
+}
+
+.inicio-presentacion h1 {
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 4px 4px 4px rgba(243, 236, 236, 0.75);
+  font-family: "Grand Hotel", cursive;
+}
+
+.subtitulo-ppal {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.boton {
+  width: 100px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: #9e2634;
+  color: antiquewhite;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+/* -----------------------------estilos grid home----------------------------- */
+
+.grid-container {
+  max-width: 950px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  grid-template-areas:
+    "pri seg"
+    "ter cua"
+    "qui sex"
+    "sep sep";
+}
+
+.primer-bloque {
+  grid-area: pri;
+  height: 25rem;
+}
+
+.primer-bloque p {
+  text-align: justify;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.segundo-bloque {
+  grid-area: seg;
+  height: 25rem;
+  background-image: url(../imagenes/pastelera1.svg);
+  background-size: cover;
+}
+
+.imgSobreNosotros {
+  align-self: stretch;
+}
+
+.tercer-bloque {
+  grid-area: ter;
+  /* height: 15rem;  */
+  align-items: center;
+  justify-content: center;
+}
+
+.tercer-bloque iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.cuarto-bloque {
+  grid-area: cua;
+  height: 18rem;
+}
+
+.cuarto-bloque .parrafo-ubicacion {
+  align-content: center;
+  text-align: center;
+}
+
+.quinto-bloque {
+  grid-area: qui;
+  height: 13rem;
+}
+
+.quinto-bloque .parrafo-video {
+  align-content: center;
+  text-align: center;
+}
+
+.sexto-bloque {
+  grid-area: sex;
+  height: 13rem;
+}
+
+.sexto-bloque iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.septimo-bloque {
+  grid-area: sep;
+}
+
+.septimo-bloque .texto-footer {
+  font-size: 0.8rem;
+  text-align: center;
+  align-items: center;
+}
+
+main .subtitulo {
+  font-family: "Grand Hotel", cursive;
+  color: #9e2634;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/*------------------------------- estilos página productos---------------------------------*/
+
+main {
+  background-color: #f8ede9;
+}
+
+main .titulo-principal-productos {
+  background: url(../imagenes/banner__productos.png);
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  min-height: auto;
+}
+
+.productos-textos {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9e2634;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 4px 4px 4px rgba(243, 236, 236, 0.75);
+  font-family: "Grand Hotel", cursive;
+}
+
+.subtitulo-ppal-productos {
+  margin-bottom: 0;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+main h2 {
+  font-size: 2rem;
+  color: #9e2634;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+main .lista-productos {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+  color: #686363;
+}
+
+.lista-productos li::before {
+  content: "☆";
+}
+
+.bloque-productos {
+  display: flex;
+  margin: 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 200px;
+  background-color: #f8ede9;
+}
+
+.img-productos {
+  border: 4px solid rgb(226, 191, 179);
+  border-radius: 15px 0px 15px 0px;
+  height: 75%;
+}
+
+/*------------------------------- estilos página catering--------------------------------- */
+
+main {
+  background-color: #f8ede9;
+}
+
+main .titulo-principal-catering {
+  background: url(../imagenes/banner2.png);
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  min-height: auto;
+}
+
+.catering-textos {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9e2634;
+}
+
+main h1 .catering-textos {
+  font: 5rem, "Grand Hotel", cursive;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 4px 4px 4px rgba(243, 236, 236, 0.75);
+}
+
+.titulo-seccion {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.parrafo-catering {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: #686363;
+  line-height: 125%;
+}
+
+/*---------------------------------bloque uno---------------------------------*/
+
+.item-catering {
+  /*aplica a todas las listas de la sección catering*/
+  color: #686363;
+  line-height: 135%;
+}
+
+div ul li {
+  list-style: none;
+  position: relative;
+  margin: 8px;
+}
+
+main .bloque-lunch,
+.bloque-pasteleria-dulce,
+.bloque-sandwiches {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 100vw;
+  margin: 1rem;
+}
+
+.catering {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.catering-img {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  width: 30vw;
+  border: 4px solid rgb(226, 191, 179);
+  border-radius: 15px 0px 15px 0px;
+}
+
+/*------------------------------- estilos página promociones---------------------------------*/
+
+main {
+  background-color: #f8ede9;
+}
+
+main .titulo-principal-promociones {
+  background: url(../imagenes/alf.png);
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  min-height: auto;
+}
+
+.promociones-textos {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #9e2634;
+}
+
+h1 .promociones-textos {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 4px 4px 4px rgba(243, 236, 236, 0.75);
+  font: "Grand Hotel", cursive;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 2rem;
+  color: #9e2634;
+  text-align: center;
+}
+.card-text {
+  text-align: center;
+}
+
+.btn {
+  background-color: #9e2634;
+  border-color: #f8ede9;
+}
+
+/*------------------------------- estilos página contacto---------------------------------*/
+
+main .titulo-principal-contacto {
+  background: url(../imagenes/pastelera1.svg);
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  min-height: auto;
+  color: #9e2634;
+  padding: 20px;
+}
+
+main .formulario {
+  line-height: 2;
+  margin: 0 auto;
+  min-width: 300px;
+  max-width: 500px;
+  color: rgb(78, 72, 64);
+}
+
+main .formulario fieldset {
+  border: none;
+  padding: 2rem 1rem;
+  border-bottom: 3px solid rgb(170, 118, 118);
+}
+
+main .formulario input,
+textarea {
+  width: 100%;
+  min-height: 2em;
+  color: rgb(78, 72, 64);
+  padding: 0.5rem;
+}
+
+#email {
+  box-sizing: content-box;
+}
+
+/* ------------------------------estilos footer---------------------------------*/
+
+.footer-pasteleria {
+  font-size: 0.8rem;
+  text-align: center;
+  align-items: center;
+}
+
+/*-------------media querys adaptables a responsive TABLET--------*/
+
+@media screen and (max-width: 899px) {
+  body {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f8ede9;
+  }
+
+  /* --------------- banner ------------- */
+
+  .inicio-presentacion {
+    height: 250px;
+  }
+
+  .inicio-presentacion h1 {
+    font-size: 3.3rem;
+  }
+
+  .subtitulo-ppal {
+    font-size: 1.2rem;
+    padding: 0rem 1.5rem;
+  }
+
+  /* -----------estilos de index ---------- */
+
+  main .grid-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  main h2 {
+    font-size: 2rem;
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  main .subtitulo {
+    font-size: 1.9rem;
+    margin: 0;
+  }
+
+  main p {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-top: -1.5rem;
+  }
+
+  main .primer-bloque {
+    margin: 0;
+    height: 25rem;
+  }
+
+  main .segundo-bloque {
+    height: 20rem;
+    background-image: url(../imagenes/pastelera2.png);
+  }
+
+  main .cuarto-bloque {
+    margin: 0;
+    height: 15rem;
+  }
+
+  main .quinto-bloque {
+    margin: 0 0 0.7rem 0;
+  }
+
+  main .quinto-bloque .parrafo-video {
+    height: 5rem;
+    margin: 0;
+    margin-top: 0;
+  }
+
+  main .septimo-bloque .texto-footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  /* ----------estilos de productos ------------- */
+
+  main .bloque-productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  main .img-productos {
+    height: 30%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-pasteleria {
+    font-size: 0.9rem;
+  }
+
+  /* --------------estilos de promociones ------------------- */
+
+  main h1 {
+    font-size: 4rem;
+  }
+
+  main .container {
+    gap: 2rem;
+  }
+
+  main .card-body .card-title {
+    font-size: 2rem;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  main .card-body .card-text {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.3rem;
+  }
+
+  /* --------------estilos de contacto ------------------- */
+
+  main .titulo-principal-titulo {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  main .subtitulo-pal {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #email {
+    box-sizing: content-box;
+  }
+
+.formulario{
+  padding: 2rem;
+}
+
+}
+
+/* -----------------------media querys adaptables a responsive MOBILE----------------------------*/
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  body {
+    max-width: 350px;
+    margin: 0 auto;
+    background: #f8ede9;
+  }
+
+  .navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
+  }
+
+  /* --------------- banner ------------- */
+
+  .inicio-presentacion {
+    height: 250px;
+  }
+
+  .inicio-presentacion h1 {
+    font-size: 2rem;
+  }
+
+  .subtitulo-ppal {
+    font-size: 1rem;
+    padding: 0rem 1.5rem;
+  }
+
+  /* -----------estilos de index ---------- */
+
+  main .grid-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  main .subtitulo {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  main p {
+    font-size: 0.8rem;
+    margin: 0;
+    margin-top: -2rem;
+  }
+
+  main .primer-bloque {
+    margin: 0;
+    height: 20rem;
+    margin-bottom: -2rem;
+  }
+
+  main .segundo-bloque {
+    height: 19rem;
+    margin-bottom: 1rem;
+  }
+
+  main .cuarto-bloque {
+    margin: 0;
+    height: 9rem;
+  }
+
+  main .cuarto-bloque .parrafo-ubicacion {
+    height: 5rem;
+    margin: 0;
+    margin-top: -2rem;
+  }
+
+  main .quinto-bloque {
+    margin: 0;
+    height: 10rem;
+  }
+
+  main .quinto-bloque .parrafo-video {
+    height: 5rem;
+    margin: 0;
+    margin-top: 0;
+  }
+
+  main .septimo-bloque {
+    margin-top: 5px;
+  }
+
+  main .septimo-bloque .texto-footer {
+    font-size: 0.5rem;
+  }
+
+  /* ----------estilos de productos ------------- */
+
+  main .titulo-principal-productos {
+    height: 100px;
+  }
+
+  main .catering {
+    padding: 0.5rem;
+  }
+
+  main .productos-textos {
+    font-size: 3rem;
+  }
+
+  main .lista-productos {
+    display: flex;
+    align-content: center;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    line-height: 0.5rem;
+    margin: 1rem 0 0 0;
+  }
+
+  main .bloque-productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .img-productos {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .footer-pasteleria {
+    font-size: 0.5rem;
+  }
+
+  /* --------------estilos de catering ------------------- */
+
+  main .titulo-principal-catering {
+    height: 100px;
+  }
+
+  main .catering-textos {
+    font-size: 3rem;
+  }
+
+  main .parrafo-catering p {
+    text-align: justify;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    padding: 0 1rem;
+  }
+
+  main .bloque-lunch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  main .catering .titulo-seccion {
+    margin-bottom: 0;
+    text-align: left;
+    padding: 0;
+  }
+
+  main .lista-lunch {
+    display: flex;
+    align-content: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    line-height: -1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  main .lista-lunch li::before {
+    content: "☆";
+  }
+
+  /* --------------estilos de promociones ------------------- */
+
+  main .titulo-principal-promociones {
+    height: 100px;
+  }
+
+  main .promociones-textos {
+    font-size: 2rem;
+  }
+
+  main .container {
+    gap: 2rem;
+  }
+
+  main .card-body .card-title {
+    font-size: 1.5rem;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  main .card-body .card-text {
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.3rem;
+  }
+
+  /* --------------estilos de contacto ------------------- */
+
+  main .titulo-principal-contacto {
+    height: 100px;
+  }
+
+  main .titulo-principal-titulo {
+    font-size: 2rem;
+    margin-top: -0.6rem;
+  }
+
+  main .subtitulo-pal {
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .formulario {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  main .formulario input {
+    padding: 0.3rem;
+  }
+
+  textarea {
+    padding: 0.3rem;
+  }
+}
+
