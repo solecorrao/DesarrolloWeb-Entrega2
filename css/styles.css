@@ -84,8 +84,15 @@ hr{
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 10px;
 }
+
+.boton:hover{
+  cursor: pointer;
+  background-color: #e6b5a9;
+  transition: color 1s;
+  color:#9e2634
+  }
 
 /* -----------------------------estilos grid home----------------------------- */
 
@@ -100,6 +107,7 @@ hr{
     "ter cua"
     "qui sex"
     "sep sep";
+    gap: 1.5rem;
 }
 
 .primer-bloque {
@@ -118,6 +126,7 @@ hr{
   height: 25rem;
   background-image: url(../imagenes/pastelera1.svg);
   background-size: cover;
+  box-shadow: 3px 5px 5px rgb(176, 171, 171);
 }
 
 .imgSobreNosotros {
@@ -129,6 +138,7 @@ hr{
   /* height: 15rem;  */
   align-items: center;
   justify-content: center;
+  box-shadow: 3px 5px 5px rgb(176, 171, 171);
 }
 
 .tercer-bloque iframe {
@@ -159,6 +169,7 @@ hr{
 .sexto-bloque {
   grid-area: sex;
   height: 13rem;
+  box-shadow: 3px 5px 5px rgb(176, 171, 171);
 }
 
 .sexto-bloque iframe {
@@ -168,13 +179,15 @@ hr{
 
 .septimo-bloque {
   grid-area: sep;
-  background-color: beige;;
+  background-color: #f8ede9;
+  line-height: 1.3rem;
 }
 
 .septimo-bloque .texto-footer {
   font-size: 0.8rem;
   text-align: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 main .subtitulo {
@@ -183,6 +196,16 @@ main .subtitulo {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 0;
+}
+
+.bi{
+  color: #e6b5a9;
+}
+
+.bi:hover {
+  cursor: pointer;
+  color: #9e2634;
+  transition: color 1s;
 }
 
 /*------------------------------- estilos página productos---------------------------------*/
@@ -244,24 +267,6 @@ main .lista-productos {
 
 .lista-productos li::before {
   content: "☆";
-}
-
-.bloque-productos {
-  display: flex;
-  margin: 20px;
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  height: 200px;
-  background-color: #f8ede9;
-}
-
-.img-productos {
-  border: 4px solid rgb(226, 191, 179);
-  border-radius: 15px 0px 15px 0px;
-  height: 75%;
 }
 
 /*------------------------------- estilos página catering--------------------------------- */
@@ -348,14 +353,16 @@ main .bloque-lunch,
   flex-direction: column;
   vertical-align: middle;
   width: 30vw;
-  border: 4px solid rgb(226, 191, 179);
-  border-radius: 15px 0px 15px 0px;
-}
+  box-shadow: 3px 5px 5px rgb(176, 171, 171);
+  }
+
+  .parrafo-catering{
+    text-align: justify;
+  }
 
 /*------------------------------- estilos página promociones---------------------------------*/
 
-
-.titulo-principal-promociones {
+.titulo-principal-promociones{
   background: url(../imagenes/alf.png);
   height: 200px;
   background-position: center;
@@ -393,11 +400,16 @@ h1 .promociones-textos {
   row-gap: 1rem;
 }
 
+.card{
+ box-shadow: 3px 5px 5px rgb(176, 171, 171);
+}
+
 .card-title {
   font-size: 2rem;
   color: #9e2634;
   text-align: center;
 }
+
 .card-text {
   text-align: center;
 }
@@ -405,7 +417,16 @@ h1 .promociones-textos {
 .btn {
   background-color: #9e2634;
   border-color: #f8ede9;
+  color: antiquewhite;
 }
+
+.btn:hover{
+  cursor: pointer;
+  background-color: #e6b5a9;
+  transition: color 1s;
+  color: #9e2634;
+  }
+
 
 /*------------------------------- estilos página contacto---------------------------------*/
 
@@ -419,7 +440,7 @@ h1 .promociones-textos {
   min-height: auto;
   color: #9e2634;
   padding: 20px;
-}
+  }
 
 main .formulario {
   line-height: 2;
@@ -443,15 +464,24 @@ textarea {
   padding: 0.5rem;
 }
 
+
+
 /* ------------------------------estilos footer---------------------------------*/
 
 .footer-pasteleria {
   font-size: 0.8rem;
   text-align: center;
   align-items: center;
-  /* background-color: beige;; */
+  margin-top: 1rem;
+  }
+
+.boton-personalizado{
+  cursor: pointer;
 }
 
+.texto-footer{
+  margin-bottom: 1rem;
+}
 /*-------------media querys adaptables a responsive TABLET--------*/
 
 @media screen and (max-width: 899px) {
@@ -511,6 +541,10 @@ textarea {
     background-image: url(../imagenes/pastelera2.png);
   }
 
+  main .tercer-bloque{
+    height: 15rem;
+  }
+
   main .cuarto-bloque {
     margin: 0;
     height: 15rem;
@@ -528,28 +562,18 @@ textarea {
 
   main .septimo-bloque .texto-footer {
     font-size: 0.9rem;
-    padding: 1rem;
+    /* padding: 1rem; */
+    text-align: center;
   }
 
   /* ----------estilos de productos ------------- */
 
-  main .bloque-productos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-  }
-
-  main .img-productos {
-    height: 30%;
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   .footer-pasteleria {
     font-size: 0.9rem;
+  }
+
+  main .titulo-principal-productos {
+     width: 100%;
   }
 
   /* --------------estilos de promociones ------------------- */
@@ -557,7 +581,6 @@ textarea {
   main h1 {
     font-size: 4rem;
   }
-
 
   main .card-body .card-title {
     font-size: 2rem;
@@ -575,7 +598,7 @@ textarea {
   /* --------------estilos de contacto ------------------- */
 
   .titulo-principal-titulo {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-top: 1rem;
   }
 
@@ -652,12 +675,16 @@ textarea {
   main .primer-bloque {
     margin: 0;
     height: 20rem;
-    margin-bottom: -2rem;
+    margin-bottom: -4rem;
   }
 
   main .segundo-bloque {
     height: 19rem;
     margin-bottom: 1rem;
+  }
+
+  main .tercer-bloque{
+    height: 15rem;
   }
 
   main .cuarto-bloque {
@@ -669,10 +696,16 @@ textarea {
     height: 5rem;
     margin: 0;
     margin-top: -2rem;
+    margin-bottom: -4rem;
   }
 
-  main .quinto-bloque {
+  main .cuarto-bloque {
+    margin-bottom: -2rem;
+  }
+
+   main .quinto-bloque {
     margin: 0;
+    margin-bottom: -1rem;
     height: 10rem;
   }
 
@@ -682,13 +715,13 @@ textarea {
     margin-top: 0;
   }
 
-  main .septimo-bloque {
+  /* main .septimo-bloque {
     margin-top: 5px;
-
-  }
+  } */
 
   main .septimo-bloque .texto-footer {
     font-size: 0.5rem;
+    margin-top: 0;
   }
 
   /* ----------estilos de productos ------------- */
@@ -729,6 +762,7 @@ textarea {
 
   .footer-pasteleria {
     font-size: 0.5rem;
+
   }
 
   /* --------------estilos de catering ------------------- */
